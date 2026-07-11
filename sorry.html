@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 Months of Us | I'm Sorry</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <nav class="navbar animate-pop">
+        <a href="index.html">Home</a>
+        <a href="questions.html">Questions</a>
+        <a href="game.html">Play a Game</a>
+        <a href="sorry.html" class="active">Apology</a>
+        <a href="celebration.html">Celebrate</a>
+    </nav>
+
+    <div class="container animate-pop" id="sorry-content" style="min-height: 400px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <h1 class="title">Will You Forgive Me?</h1>
+        <div class="page-doodles"><span>💘</span><span>🌹</span><span>💌</span><span>🧸</span><span>✨</span></div>
+        <div class="envelope-card">                             
+            <button class="envelope-toggle" id="open-envelope" type="button" aria-label="Open the apology envelope">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body"></div>
+                </div>
+            </button>
+            <div class="letter-panel" id="letter-panel">
+                <div class="letter-content">
+                    <h2>My Love,</h2>
+                    <p class="letter-text">
+                        Betuu.. I apologise with all my heart. I am so much sorry to make you feel distant and unloved. Rutu, mara dil ma khali tu j che jene mare bav j khus jovi che life my after parents. Tu j maro pehlo and sacho prem che babyy. Tu j mara thi sad rais to aa manu nu shu thase babyy. I know babyy I am bad boy but i am firstly your boy darling. Bachuu , I promise to fix up everything from scratch and make you feel again the butterflies in your beautiful body. I will understand the pain behind youy eyes. I know dika what's your situation and what you are going through. Your beautiful smile and vibe actually make my day "best". I LOVE YOU RUTU... Muuuaaahhh. Once again sorry beta 🥺
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="subtitle envelope-instructions">Tap the envelope to open your letter.</p>
+        
+        <div style="position: relative; width: 100%; height: 100px; display: flex; justify-content: center; gap: 40px; margin-top: 40px;">
+            <button id="yes-btn" class="btn" style="min-width: 100px;">YES!</button>
+            <button id="no-btn" class="btn btn-secondary" style="min-width: 100px; transition: none;">NO</button>
+        </div>
+        <div class="video-card" id="video-card">
+            <h3>Watch this special apology video</h3>
+            <div class="video-frame">
+                <video id="apology-video" controls preload="metadata">
+                    <source src="WhatsApp Video 2026-05-15 at 10.37.37 PM.mp4" type="video/mp4">
+                    Your browser does not support this video.
+                </video>
+            </div>
+        </div>
+        <script>
+            const envelope = document.getElementById('envelope');
+            const openEnvelope = document.getElementById('open-envelope');
+            const letterPanel = document.getElementById('letter-panel');
+            const yesBtn = document.getElementById('yes-btn');
+            const videoCard = document.getElementById('video-card');
+            const apologyVideo = document.getElementById('apology-video');
+
+            openEnvelope.addEventListener('click', () => {
+                envelope.classList.toggle('open');
+                letterPanel.classList.toggle('open');
+                openEnvelope.setAttribute('aria-label', envelope.classList.contains('open') ? 'Close the apology envelope' : 'Open the apology envelope');
+            });
+
+            yesBtn.addEventListener('click', () => {
+                videoCard.classList.add('visible');
+                apologyVideo.play().catch(() => {});
+                yesBtn.disabled = true;
+                yesBtn.textContent = 'Video unlocked';
+                videoCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        </script>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

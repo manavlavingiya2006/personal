@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 Months of Us | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <nav class="navbar animate-pop">
+        <a href="index.html" class="active">Home</a>
+        <a href="questions.html">Questions</a>
+        <a href="game.html">Play a Game</a>
+        <a href="sorry.html">Apology</a>
+        <a href="celebration.html">Celebrate</a>
+    </nav>
+
+    <div class="container animate-pop">
+        <h1 class="title">Happy 18 Months my Rutu babyy!</h1>
+        <p class="subtitle">Every day with you is a doodle on the canvas of my heart. 🎨💖</p>
+        <div class="page-doodles"><span>💘</span><span>🌹</span><span>💌</span><span>🧸</span><span>✨</span></div>
+        <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+            It's been a magical 18 months since we started this journey. From the smallest smiles to the biggest hugs, you mean the entire world to me. I've built this little world just for us to celebrate everything we have.
+        </p>
+
+        <div>
+            <a href="questions.html" class="btn">Take the Quiz</a>
+            <a href="game.html" class="btn btn-secondary">Play Match Game</a>
+        </div>
+
+        <section class="memory-section" id="memory-gallery">
+            <div class="section-header">
+                <h2>OUR MEMORIES</h2>
+                <p>Click a memory to bring it forward. Past moments slide left and future memories move right.</p>
+            </div>
+            <div class="memory-display">
+                <div class="memory-side memory-left" id="memory-left"></div>
+                <div class="memory-center" id="memory-center">
+                    <div class="memory-main-card" id="memory-main-card"></div>
+                </div>
+                <div class="memory-side memory-right" id="memory-right"></div>
+            </div>
+            <div class="memory-thumbnails" id="memory-thumbnails" aria-label="Memory thumbnails"></div>
+        </section>
+    </div>
+
+    <!-- Background pattern is handled by CSS body background -->
+    <script src="main.js"></script>
+</body>
+</html>

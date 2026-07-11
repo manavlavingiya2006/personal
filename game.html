@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 Months of Us | Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <nav class="navbar animate-pop">
+        <a href="index.html">Home</a>
+        <a href="questions.html">Questions</a>
+        <a href="game.html" class="active">Play a Game</a>
+        <a href="sorry.html">Apology</a>
+        <a href="celebration.html">Celebrate</a>
+    </nav>
+
+    <div class="container animate-pop">
+        <h1 class="title">Love Puzzle 💘</h1>
+        <p class="subtitle">Piece together the photo in 60 seconds.</p>
+        <div class="page-doodles"><span>💘</span><span>🌹</span><span>💌</span><span>🧸</span><span>✨</span></div>
+        <div id="game-status" style="font-size: 22px; font-weight: 700; color: var(--accent-rose); margin-bottom: 18px;">Drag each uneven piece into its correct spot.</div>
+        <div id="timer" style="font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #4f2144;"></div>
+        <div id="score-board" style="font-size: 18px; margin-bottom: 14px; color: #5c2b52;"></div>
+        <div id="puzzle-board" class="game-grid"></div>
+        <div id="pieces-pool" class="puzzle-pool"></div>
+        <button id="restart-game" class="btn" style="margin-top: 20px;">Restart Puzzle</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
